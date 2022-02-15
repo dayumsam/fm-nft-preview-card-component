@@ -1,0 +1,158 @@
+:root {
+  --clr-bg: 217, 54%, 11%;
+  --clr-bg2: 216, 50%, 16%;
+  --clr-accent: 215, 32%, 27%;
+  --clr-cyan: 178, 100%, 50%;
+  --clr-softblue: 215, 51%, 70%;
+  --clr-white: 0, 0%, 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  background-color: hsl(var(--clr-bg));
+
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: hsl(var(--clr-white));
+}
+
+/* utility classes */
+
+.fw-1 {
+  font-weight: 300;
+}
+
+.fw-2 {
+  font-weight: 400;
+}
+
+.fw-3 {
+  font-weight: 600;
+}
+
+/* utility classes */
+
+/* component classes */
+
+.card {
+  padding: 1.3em;
+
+  max-width: 19em;
+
+  border-radius: 0.8em;
+
+  background-color: hsl(var(--clr-bg2));
+}
+
+.img-wrapper {
+  cursor: pointer;
+  position: relative;
+}
+
+.img-wrapper > .overlay {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  background-color: hsla(var(--clr-cyan), 0.5);
+  border-radius: 0.5em;
+
+  display: grid;
+  place-items: center;
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.img-wrapper > .overlay:hover {
+  opacity: 1;
+}
+
+.card-img {
+  margin-bottom: 1.5em;
+
+  width: 100%;
+
+  border-radius: 0.5em;
+
+  display: block;
+}
+
+.card-title {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: hsl(var(--clr-cyan));
+}
+
+.card-desc {
+  color: hsl(var(--clr-softblue));
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.9em;
+  margin-block: 1.5em;
+}
+
+.row > * {
+  --clr-font: var(--clr-white, #fff);
+
+  display: flex;
+  align-items: center;
+
+  color: hsl(var(--clr-font));
+}
+
+.row > * :first-child {
+  margin-right: 0.3em;
+}
+
+.rule {
+  background-color: hsl(var(--clr-accent));
+  height: 0.1em;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+
+  color: hsl(var(--clr-softblue));
+}
+
+.info .avatar {
+  height: 2em;
+  border-radius: 50%;
+  border: hsl(var(--clr-white, #fff)) 1px solid;
+}
+
+.info .name {
+  color: hsl(var(--clr-white));
+  cursor: pointer;
+}
+
+.info .name:hover {
+  color: hsl(var(--clr-cyan));
+}
